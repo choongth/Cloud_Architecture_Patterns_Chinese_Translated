@@ -222,7 +222,7 @@ A speedy website is good for business. A Compuware analysis of 33 major retailer
 There are many examples of companies that have improved customer satisfaction and increased revenue by speeding up their web applications, and even more examples of utter failure where a web application crashed because it simply was not equipped to handle an onslaught of traffic. Self-inflicted failures can happen, such as when large retailers advertise online sales for which they have not adequately prepared (this happens routinely on the Monday after Thanksgiving in the United States, a popular online shopping day known as Cyber Monday). Similar failures are associated with Super Bowl commercials.
 
 > [!IMPORTANT]
-> <h3 align="center">Comparing Performance and Scalability</h3>
+> ### Comparing Performance and Scalability
 >
 > Discussions of web application speed (or “slowness”) sometimes conflate two concepts: performance and scalability.
 >
