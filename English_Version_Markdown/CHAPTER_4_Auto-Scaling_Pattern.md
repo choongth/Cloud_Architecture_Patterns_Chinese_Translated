@@ -1,6 +1,6 @@
 # CHAPTER 4 &emsp; Auto-Scaling Pattern
 
-<div algin="justify">
+<div align="justify">
 
 
 

@@ -1,6 +1,6 @@
 # CHAPTER 2 &emsp; Horizontally Scaling Compute Pattern
 
-<div algin="justify">
+<div align="justify">
 
 
 

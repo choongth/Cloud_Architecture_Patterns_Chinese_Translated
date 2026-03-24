@@ -1,6 +1,6 @@
 # CHAPTER 7 &emsp; Database Sharding Pattern
 
-<div algin="justify">
+<div align="justify">
 
 
 

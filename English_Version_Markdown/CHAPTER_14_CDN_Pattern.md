@@ -1,6 +1,6 @@
 # CHAPTER 14 &emsp; CDN Pattern
 
-<div algin="justify">
+<div align="justify">
 
 
 

@@ -1,6 +1,6 @@
 # CHAPTER 15 &emsp; Multisite Deployment Pattern
 
-<div algin="justify">
+<div align="justify">
 
 
 

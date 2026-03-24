@@ -1,6 +1,6 @@
 # CHAPTER 13 &emsp; Valet Key Pattern
 
-<div algin="justify">
+<div align="justify">
 
 
 

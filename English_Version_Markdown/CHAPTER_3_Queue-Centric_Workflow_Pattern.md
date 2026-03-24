@@ -1,6 +1,6 @@
 # CHAPTER 3 &emsp; Queue-Centric Workflow Pattern
 
-<div algin="justify">
+<div align="justify">
 
 
 
