@@ -14,9 +14,7 @@ This chapter assumes we are scaling a distributed multi-tier web application, th
             <img src="../images/preface/blue.png" width="50">
         </td>
         <td>
-            <blockquote>
-                This chapter is not specific to the cloud except where explicitly stated.
-            </blockquote>
+            This chapter is not specific to the cloud except where explicitly stated.
         </td>
     </tr>
 </table>
