@@ -32,9 +32,7 @@ An application runs on multiple *nodes*, which have hardware resources. Applicat
             <img src="../images/preface/blue.png" width="70">
         </td>
         <td>
-            <blockquote>
-                In the public cloud, a compute node is most likely a virtual machine, while a data node provisioned through a cloud service is most likely a cluster of servers.
-            </blockquote>
+            In the public cloud, a compute node is most likely a virtual machine, while a data node provisioned through a cloud service is most likely a cluster of servers.
         </td>
     </tr>
 </table>
@@ -46,7 +44,7 @@ Application scale can be extended by providing additional hardware resources, as
 
 These scaling approaches are neither mutually exclusive nor all-or-nothing. Any application is capable of vertically scaling up, horizontally scaling out, neither, or both. For example, parts of an application might only vertically scale up, while other parts might also horizontally scale out.
 
-> <center><h3>Increasing Capacity of Roadways</h3></center>
+> <h3 align="center">Increasing Capacity of Roadways</h3>
 >
 > Consider a roadway for automobile travel. If the roadway was unable to support the desired volume of traffic, we could improve matters in a number of possible ways. One improvement would be to upgrade the road materials (“the hardware”) from a dirt road to pavement to support higher travel speeds. This is vertically scaling up; the cars and trucks (“the software”) will be able to go faster. Alternatively, we could widen the road to multiple lanes. This is horizontally scaling out; more cars and trucks can drive in parallel. And of course we could both upgrade the road materials and add more lanes, combining scaling up with scaling out.
 
@@ -65,9 +63,7 @@ Historically, this has been the most common approach to scaling due to its broad
             <img src="../images/preface/blue.png" width="50">
         </td>
         <td>
-            <blockquote>
-                Scaling up is limited by the utilizable capability of available hardware.
-            </blockquote>
+            Scaling up is limited by the utilizable capability of available hardware.
         </td>
     </tr>
 </table>
@@ -78,9 +74,7 @@ Historically, this has been the most common approach to scaling due to its broad
             <img src="../images/preface/red.png" width="100">
         </td>
         <td>
-            <blockquote>
-                Vertical scaling can also refer to running multiple instances of software within a single machine. The architecture patterns in this book only consider vertical scaling as it relates to physical system resources.
-            </blockquote>
+            Vertical scaling can also refer to running multiple instances of software within a single machine. The architecture patterns in this book only consider vertical scaling as it relates to physical system resources.
         </td>
     </tr>
 </table>
@@ -96,7 +90,7 @@ Horizontally scaling out, also known simply as *horizontal scaling* or *scaling 
 
 The architectural challenges in vertical scaling differ from those in horizontal scaling; the focus shifts from maximizing the power of individual nodes to combining the power of many nodes. Horizontal scaling tends to be more complex than vertical scaling, and has a more fundamental influence on application architecture. Vertical scaling is often hardware- and infrastructure-focused—we “throw hardware at the problem”—whereas horizontal scaling is development- and architecture-focused. Depending on which scaling strategy is employed, the responsibility may fall to specialists in different departments, complicating matters for some companies.
 
-> <center><h3>Imperfect Terminology</h3></center>
+> <h3 align="center">Imperfect Terminology</h3>
 >
 > To align with well-established industry practice, we use the term *horizontal scaling*, although *horizontal resource allocation* is more descriptive. The pattern is really about how resources are allocated and assembled; application scalability is simply one of many pos-sible outcomes from the use of this pattern. Some specific benefits are listed later in the section that defines *cloud-native application*.
 
@@ -106,9 +100,7 @@ The architectural challenges in vertical scaling differ from those in horizontal
             <img src="../images/preface/red.png" width="100">
         </td>
         <td>
-            <blockquote>
-                Parallel or multicore programming to fully leverage CPU cores within a single node should not be confused with using multiple nodes together. This book is concerned only with the latter.
-            </blockquote>
+            Parallel or multicore programming to fully leverage CPU cores within a single node should not be confused with using multiple nodes together. This book is concerned only with the latter.
         </td>
     </tr>
 </table>
@@ -125,9 +117,7 @@ Not all nodes in the application are homogeneous, just nodes within a function. 
             <img src="../images/preface/blue.png" width="50">
         </td>
         <td>
-            <blockquote>
-                Horizontal scaling is more efficient with homogeneous nodes.
-            </blockquote>
+            Horizontal scaling is more efficient with homogeneous nodes.
         </td>
     </tr>
 </table>
@@ -142,9 +132,7 @@ Within a specific type of node (such as a web server), nodes operate autonomousl
             <img src="../images/preface/blue.png" width="50">
         </td>
         <td>
-            <blockquote>
-                An <i>autonomous node</i> does not know about other nodes of the same type.
-            </blockquote>
+            An <i>autonomous node</i> does not know about other nodes of the same type.
         </td>
     </tr>
 </table>
@@ -169,9 +157,7 @@ Response time will vary somewhat from user to user. A meaningful statement can u
             <img src="../images/preface/blue.png" width="70">
         </td>
         <td>
-            <blockquote>
-                Example: With 100 concurrent users, the response time will be under 2 seconds 60% of the time, 2-5 seconds 38% of the time, and 5 seconds or greater 2% of the time.
-            </blockquote>
+            Example: With 100 concurrent users, the response time will be under 2 seconds 60% of the time, 2-5 seconds 38% of the time, and 5 seconds or greater 2% of the time.
         </td>
     </tr>
 </table>
@@ -219,9 +205,7 @@ Another approach is to improve our hardware. We could upgrade our mobile device 
             <img src="../images/preface/blue.png" width="70">
         </td>
         <td>
-            <blockquote>
-                Not only does hardware continuously improve year after year, but so does the price/performance ratio: our money goes further every year.
-            </blockquote>
+            Not only does hardware continuously improve year after year, but so does the price/performance ratio: our money goes further every year.
         </td>
     </tr>
 </table>
@@ -237,7 +221,7 @@ A speedy website is good for business. A Compuware analysis of 33 major retailer
 
 There are many examples of companies that have improved customer satisfaction and increased revenue by speeding up their web applications, and even more examples of utter failure where a web application crashed because it simply was not equipped to handle an onslaught of traffic. Self-inflicted failures can happen, such as when large retailers advertise online sales for which they have not adequately prepared (this happens routinely on the Monday after Thanksgiving in the United States, a popular online shopping day known as Cyber Monday). Similar failures are associated with Super Bowl commercials.
 
-> <center><h3>Comparing Performance and Scalability</h3></center>
+> <h3 align="center">Comparing Performance and Scalability</h3>
 >
 > Discussions of web application speed (or “slowness”) sometimes conflate two concepts: performance and scalability.
 >
@@ -253,9 +237,7 @@ There are many examples of companies that have improved customer satisfaction an
             <img src="../images/preface/blue.png" width="70">
         </td>
         <td>
-            <blockquote>
-                Network latency can be an important performance factor influencing user experience. This is considered in more depth starting with <i>Network Latency Primer</i> (Chapter 11).
-            </blockquote>
+            Network latency can be an important performance factor influencing user experience. This is considered in more depth starting with <i>Network Latency Primer</i> (Chapter 11).
         </td>
     </tr>
 </table>
@@ -312,9 +294,7 @@ Windows Azure and Amazon Web Services are full-featured public cloud platforms f
             <img src="../images/preface/blue.png" width="50">
         </td>
         <td>
-            <blockquote>
-                It is the application architecture that makes an application cloud-native, not the choice of platform.
-            </blockquote>
+            It is the application architecture that makes an application cloud-native, not the choice of platform.
         </td>
     </tr>
 </table>
