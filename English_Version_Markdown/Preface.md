@@ -12,9 +12,7 @@
             <img src="../images/preface/blue.png" width="100">
         </td>
         <td>
-            <blockquote>
-                Some text
-            </blockquote>
+            Some text
         </td>
     </tr>
 </table>
@@ -28,9 +26,7 @@
             <img src="../images/preface/red.png" width="100">
         </td>
         <td>
-            <blockquote>
-                Some text
-            </blockquote>
+            Some text
         </td>
     </tr>
 </table>
