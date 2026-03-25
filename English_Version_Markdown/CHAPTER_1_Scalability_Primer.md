@@ -8,7 +8,7 @@ Scaling is about allocating resources for an application and managing those reso
 
 This chapter assumes we are scaling a distributed multi-tier web application, though the principles are also more generally applicable.
 
-<table border="0">
+<table>
     <tr>
         <td>
             <img src="../images/preface/blue.png" width="50">

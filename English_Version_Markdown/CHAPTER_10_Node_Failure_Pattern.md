@@ -66,7 +66,7 @@ When your application code runs in a virtual machine (especially on commodity ha
 
 <br>
 
-<table border="0">
+<table>
     <tr>
         <td>
             <img src="../images/preface/red.png" width="100">
