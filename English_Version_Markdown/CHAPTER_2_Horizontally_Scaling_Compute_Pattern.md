@@ -81,7 +81,7 @@ Consider a line-of-business application that is expected to be available only du
 
 An application may be lightly used by relatively few people most of the time, but heavily used by tens of thousands of people during the last three business days of the month. We can adjust capacity accordingly, aligning cost to usage patterns: during most of the month two nodes are deployed, but for the last three business days of the month this is increased to ten.
 
-The simplest mechanism for adjusting deployed capacity is through the cloud vendor’s web-hosted management tool. For example, the number of deployed nodes is easily managed with a few clicks of the mouse in both the Windows Azure portal and the Amazon Web Services dashboard. In Auto-Scaling Pattern (Chapter 4) we examine additional approaches to making this more automated and dynamic.
+The simplest mechanism for adjusting deployed capacity is through the cloud vendor’s web-hosted management tool. For example, the number of deployed nodes is easily managed with a few clicks of the mouse in both the Windows Azure portal and the Amazon Web Services dashboard. In *Auto-Scaling Pattern* (Chapter 4) we examine additional approaches to making this more automated and dynamic.
 
 
 #### **Cloud scaling terminology**
@@ -155,7 +155,7 @@ When stateful nodes hold the only copy of a user’s session state, there are us
     </tr>
 </table>
 
-Sessions may also be unevenly distributed as node instances come and go. Suppose your web tier has two web server nodes, each with 1,000 active sessions. You add a third node to handle the expected spike in traffic during lunchtime. The typical load balancer randomly distributes new requests across all nodes. It will not have enough information to send new sessions to the newly added node until it also has 1,000 active sessions. It is effectively “catching up” to the other nodes in the rotation. Each of the 3 nodes will get approximately one-third of the next 1,000 new sessions, resulting in an imbalance. This imbalance is resolved as older sessions complete, provided that the number of nodes remains stable. Overloaded nodes may result in a degraded user experience, while un-derutilized nodes are not operationally efficient. What to do?
+Sessions may also be unevenly distributed as node instances come and go. Suppose your web tier has two web server nodes, each with 1,000 active sessions. You add a third node to handle the expected spike in traffic during lunchtime. The typical load balancer randomly distributes new requests across all nodes. It will not have enough information to send new sessions to the newly added node until it also has 1,000 active sessions. It is effectively “catching up” to the other nodes in the rotation. Each of the 3 nodes will get approximately one-third of the next 1,000 new sessions, resulting in an imbalance. This imbalance is resolved as older sessions complete, provided that the number of nodes remains stable. Overloaded nodes may result in a degraded user experience, while underutilized nodes are not operationally efficient. What to do?
 
 
 #### **Session state without stateful nodes**
@@ -221,7 +221,7 @@ Cloud providers assume both the financial burden of over-provisioning and the re
 >
 > We often hear that public cloud platforms offer the *illusion of infinite resources*. Obviously, resources are not *literally* infinite (infinite is rather a lot), but you can expect that any time you need more resources, they will be available (though not always instantly). This does not mean *each* resource has infinite capacity, just that you can request *as* many *instances* of the type of resource that you need.
 >
-> This is why vertical scaling is limiting, and even more so in the cloud: an individual virtual machine or database instance has some maximum capacity, after which it cannot be in-creased. With horizontal scaling, if you need to go beyond that maximum capacity, you can do so by allocating an additional virtual machine or database instance. This, of course, introduces complexity of its own, but many of the patterns in this book help in taming that complexity.
+> This is why vertical scaling is limiting, and even more so in the cloud: an individual virtual machine or database instance has some maximum capacity, after which it cannot be increased. With horizontal scaling, if you need to go beyond that maximum capacity, you can do so by allocating an additional virtual machine or database instance. This, of course, introduces complexity of its own, but many of the patterns in this book help in taming that complexity.
 
 
 #### **Sizing virtual machines**
@@ -256,7 +256,7 @@ The Page of Photos (PoP) application (which was described in the Preface and wil
 <table>
     <tr>
         <td>
-            <img src="../images/preface/blue.png" width="170">
+            <img src="../images/preface/blue.png" width="160">
         </td>
         <td>
             <i>Compute node</i> and <i>virtual machine</i> are general industry terms. The equivalent Windows Azure-specific term for node is <i>role instance</i>, or <i>web role instance</i> or <i>worker role instance</i> if more precision is needed. Windows Azure role instances are running on virtual machines, so referring to role instances as virtual machines is redundant. Windows Azure terminology is used in the remainder of this section.
@@ -275,7 +275,7 @@ It is instructive to consider the infrastructure management we no longer worry a
 
 > <h3 align="center">Cloud Services Are Still Flexible</h3>
 >
-> While Windows Azure Cloud Services are designed to shield you from infrastructure management so you can focus on simply building your application, you still have flexibility for advanced configuration if you need it. For example, using *Startup Tasks*, you can install additional Windows Services, configure IIS or Windows, and run custom installation scripts. For the most part, if an administrator can do it on Windows, you can do it on Windows Azure, though the more cloud-native your application is, the more likely things will “just work” without needing complex custom configuration. One advanced configu-ration possibility is to enable Application Request Routing (ARR) in IIS in order to support sticky sessions.
+> While Windows Azure Cloud Services are designed to shield you from infrastructure management so you can focus on simply building your application, you still have flexibility for advanced configuration if you need it. For example, using *Startup Tasks*, you can install additional Windows Services, configure IIS or Windows, and run custom installation scripts. For the most part, if an administrator can do it on Windows, you can do it on Windows Azure, though the more cloud-native your application is, the more likely things will “just work” without needing complex custom configuration. One advanced configuration possibility is to enable Application Request Routing (ARR) in IIS in order to support sticky sessions.
 
 
 ### Stateless Role Instances (or Nodes)
@@ -333,7 +333,7 @@ Analytics data is not collected by the WAD, so not automatically combined, but i
             <img src="../images/preface/blue.png" width="90">
         </td>
         <td>
-            Both Windows Azure Diagnostics and Windows Azure Storage Ana-lytics support an application-defined data retention policy. This allows applications to easily limit the size and age of operational data because the cloud platform will handle purging details.
+            Both Windows Azure Diagnostics and Windows Azure Storage Analytics support an application-defined data retention policy. This allows applications to easily limit the size and age of operational data because the cloud platform will handle purging details.
         </td>
     </tr>
 </table>
@@ -342,17 +342,17 @@ There are general purpose reporting tools in the Windows Azure Platform that mig
 
 > <h3 align="center">Related Chapters</h3>
 >
->- *Queue-Centric Workflow Pattern* (Chapter 3)
+> - *Queue-Centric Workflow Pattern* (Chapter 3)
 >
->- *Auto-Scaling Pattern* (Chapter 4)
+> - *Auto-Scaling Pattern* (Chapter 4)
 >
->- *MapReduce Pattern* (Chapter 6)
+> - *MapReduce Pattern* (Chapter 6)
 >
->- *Database Sharding Pattern* (Chapter 7)
+> - *Database Sharding Pattern* (Chapter 7)
 >
->- *Multitenancy and Commodity Hardware Primer* (Chapter 8)
+> - *Multitenancy and Commodity Hardware Primer* (Chapter 8)
 >
->- *Node Failure Pattern* (Chapter 10)
+> - *Node Failure Pattern* (Chapter 10)
 
 
 ## Summary

@@ -92,7 +92,7 @@ The architectural challenges in vertical scaling differ from those in horizontal
 
 > <h3 align="center">Imperfect Terminology</h3>
 >
-> To align with well-established industry practice, we use the term *horizontal scaling*, although *horizontal resource allocation* is more descriptive. The pattern is really about how resources are allocated and assembled; application scalability is simply one of many pos-sible outcomes from the use of this pattern. Some specific benefits are listed later in the section that defines *cloud-native application*.
+> To align with well-established industry practice, we use the term *horizontal scaling*, although *horizontal resource allocation* is more descriptive. The pattern is really about how resources are allocated and assembled; application scalability is simply one of many possible outcomes from the use of this pattern. Some specific benefits are listed later in the section that defines *cloud-native application*.
 
 <table>
     <tr>
@@ -197,7 +197,7 @@ An application can utilize resources more or less efficiently. Because scale is 
 
 Efficiency often requires a trade-off. Compressing data will enable more efficient use of network bandwidth, but at the expense of CPU utilization and memory. Be sure that removing one resource bottleneck does not introduce another.
 
-Another approach is to improve our hardware. We could upgrade our mobile device for more storage space. We could migrate our database to a more powerful server and benefit from faster CPU, more memory, and a larger and faster disk drive. *Moore’s Law*, which simply states that computer hardware performance approximately doubles every couple of years, neatly captures why this is possible: hardware continuously improves. Let’s call t*hese hardware improvements*.
+Another approach is to improve our hardware. We could upgrade our mobile device for more storage space. We could migrate our database to a more powerful server and benefit from faster CPU, more memory, and a larger and faster disk drive. *Moore’s Law*, which simply states that computer hardware performance approximately doubles every couple of years, neatly captures why this is possible: hardware continuously improves. Let’s call these *hardware improvements*.
 
 <table>
     <tr>
@@ -227,7 +227,7 @@ There are many examples of companies that have improved customer satisfaction an
 >
 > Performance is what an individual user experiences; scalability is how many users get to experience it.
 >
-> *Performance* refers to the experience of an individual user. Servicing a single user request might involve data access, web server page generation, and the delivery of HTML and images over an Internet connection. Each of these steps takes time. Once the HTML and images are delivered to the user, a web browser still needs to assemble and render the page. The elapsed time necessary to complete all these steps limits overall performance. For interactive web applications, the most important of the performance-related measure-ments is response time.
+> *Performance* refers to the experience of an individual user. Servicing a single user request might involve data access, web server page generation, and the delivery of HTML and images over an Internet connection. Each of these steps takes time. Once the HTML and images are delivered to the user, a web browser still needs to assemble and render the page. The elapsed time necessary to complete all these steps limits overall performance. For interactive web applications, the most important of the performance-related measurements is response time.
 >
 > *Scalability* refers to the number of users who have a positive experience. If the application sustains consistent performance for individual users as the number of concurrent users grows, it is scaling. For example, if the average response time is 1 second with 10 concurrent users, but the average response time climbs to 5 seconds with 100 concurrent users, then the application is not scaling. An application might scale well (handling many concurrent users with *consistent* performance), but not perform well (that consistent performance might be *slow*, whether with 100 concurrent users or just one). There is always a threshold at which scalability problems take hold; an application might perform well up to 100 concurrent users, and then degrade as the number of concurrent users increases beyond 100. In this last scenario, the application does not scale beyond 100 concurrent users.
 

@@ -39,7 +39,7 @@ A simple way to estimate effective bandwidth (at some point in time) is to use p
 
 > <h3 align="center">Doing the Math</h3>
 >
-> How much data transfer can I get for my bandwidth? Let’s do some math. Consider a T1 connection that provides 1.544 Mb/sec of bandwidth. Translating from kilobits (Kb) to kilobytes (KB) we end up with about 193 KB/sec (1544/8=193 kilobytes per second, ig-noring errors, retries, speed degradation, and assuming no other uses of the connection). Uploading a full CD-ROM (~660 MB) would take nearly an hour. Uploading a full DVD (~4.7 GB) would take around 7 hours. These calculations assume ideal network conditions, which of course you will never have.
+> How much data transfer can I get for my bandwidth? Let’s do some math. Consider a T1 connection that provides 1.544 Mb/sec of bandwidth. Translating from kilobits (Kb) to kilobytes (KB) we end up with about 193 KB/sec (1544/8=193 kilobytes per second, ignoring errors, retries, speed degradation, and assuming no other uses of the connection). Uploading a full CD-ROM (~660 MB) would take nearly an hour. Uploading a full DVD (~4.7 GB) would take around 7 hours. These calculations assume ideal network conditions, which of course you will never have.
 
 
 ## Reducing Perceived Network Latency
