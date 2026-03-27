@@ -159,5 +159,4 @@
 - SQL Azure Point In Time Restore now available in preview: *http://www.microsoft.com/en-us/download/details.aspx?id=28364*
 - Business Continuity in Windows Azure SQL Database: *http://msdn.microsoft.com/en-us/library/windowsazure/hh852669.aspx*
 
-
 </div>
