@@ -93,6 +93,7 @@ By definition, eventually consistent databases do not support ACID guarantees, t
 &emsp; &ensp; We allow for a delay before any individual data change completely propagates through the system.
 
 BASE is commonly associated with NoSQL databases, and NoSQL database services are popular in the cloud. *NoSQL*, or *Not Only SQL*, is a database style that has emerged in recent years. NoSQL databases tend to be designed for very high scale at the expense of some advanced features of traditional relational databases. For example, they tend to have limited transactional capabilities and no ACID guarantees. Notably, they are usually designed to support sharding, which is further explored in *Database Sharding Pattern* (Chapter 7).
+
 Unlike the acid and base you may have learned about in high school chemistry class, ACID and BASE can be used together safely, even in the same application.
 
 

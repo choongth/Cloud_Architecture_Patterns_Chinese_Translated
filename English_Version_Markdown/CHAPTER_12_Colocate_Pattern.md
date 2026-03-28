@@ -20,7 +20,7 @@ The Colocation Pattern effectively deals with the following challenges:
 - Application deployment is complex, involving multiple data centers, but nodes within each data center make frequent use of other nodes, which can be colocated in the same data center
 
 In general, resources that are heavily reliant on each other should be colocated.
- 
+
 A multitier application generally has a web or application server tier that accesses a database tier. It is often desirable to minimize network latency across these tiers by colocating them in the same data center. This helps maximize performance between these tiers and can avoid the costs of cloud provider data transmission.
 
 This pattern is typically used in combination with the Valet Key and CDN Patterns. Reasons to deviate from this pattern, such as proximity to consumers and overall reliability, are discussed in *Multisite Deployment Pattern* (Chapter 15).
