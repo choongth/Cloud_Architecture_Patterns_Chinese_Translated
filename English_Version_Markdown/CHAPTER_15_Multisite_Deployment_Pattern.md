@@ -144,7 +144,7 @@ In our case, as an example, visiting *http://www.pageofphotos.com/timothy* from 
 ### Replicating User Data for Performance
 
 Consider a PoP user in Ireland who posts some new photos. They can be neatly and efficiently stored in the Ireland data center with a minimum of network latency. The collection can be shared with friends in Ireland who also access them from the Ireland data center. So far, so good.
- 
+
 Now consider that a link to this page of photos is emailed to some friends in Boston. Traffic from Boston will be routed to the Virginia data center. What will happen? To make it work, the Virginia data center needs access to the same data that was saved to the Ireland data center. Our approach with PoP is split into two complementary schemes: one for uploaded photos, another for the rest of the account data.
 
 The photos are uploaded to blobs in Window Azure Storage in the nearest data center. The application makes no effort to explicitly replicate these photos to other data centers. Thumbnails for these photos are generated in the same data center [using *Queue-Centric Workflow Pattern* (Chapter 3)] and also stored as blobs. Photos are not replicated to all data centers as we plan to rely on *CDN Pattern* (Chapter 14) to deliver them most efficiently to users.
