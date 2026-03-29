@@ -152,7 +152,7 @@ The node should immediately stop pulling new items from the queue once shutdown 
 
 *Queue-Centric Workflow Pattern* (Chapter 3) describes processing services that can sometimes be lengthy. If processing is too lengthy to be completed before the node is terminated, that node has the option of saving any in-progress work outside of the local node (such as to cloud storage) in a form that can be resumed.
 
- 
+
 #### **Node shutdown without losing operational data**
 
 Web server logs and custom application logs are typically written to local disk on individual nodes. This is a reasonable approach, as it makes efficient use of available local resources to capture this log data.
@@ -163,6 +163,7 @@ As described in *Horizontally Scaling Compute Pattern* (Chapter 2), part of mana
 ### Recovering From Node Failure
 
 There are aspects to recovering from node failure: maintaining a positive user experience during the failure process, and resuming any work-in-progress that was interrupted.
+
 
 #### **Shielding interactive users from failures**
 
@@ -193,6 +194,7 @@ PoP is constantly increasing and decreasing capacity to take advantage of the co
 
 
 #### **N+1 rule**
+
 The *N+1 rule* is honored for roles that directly serve users, because user experience is very important. However, because no users are directly impacted by occasional interruptions, PoP management made the business decision to not apply the *N+1 rule* for worker roles which make up the service tier.
 
 These decisions are accounted for in PoP auto-scaling rules.
@@ -236,7 +238,7 @@ Upgrade domains are useful to the Fabric Controller since it uses them during op
 
 > <h3 align="center">Multiple Concurrent Versions</h3>
 >
-> Cloud-native applications commonly have a single deployment with mixed releases (and features) across the role instances. This staged upgrade can be managed using upgrade domains with an in-place upgrade. Another way to look at this: an application upgrade does not happen at a particular time, rather it spans time. During that time span the application is running two versions. Two customers visiting the application at the same time may be routed to different versions. If you wish to avoid deploying multiple concur¬rent versions, look into Windows Azure's VIP Swap feature.
+> Cloud-native applications commonly have a single deployment with mixed releases (and features) across the role instances. This staged upgrade can be managed using upgrade domains with an in-place upgrade. Another way to look at this: an application upgrade does not happen at a particular time, rather it spans time. During that time span the application is running two versions. Two customers visiting the application at the same time may be routed to different versions. If you wish to avoid deploying multiple concurrent versions, look into Windows Azure's VIP Swap feature.
 
 What is the right number of upgrade domains for my application? There is a tradeoff: more upgrade domains take longer to roll out, while fewer upgrade domains increase the level of diminished capacity. For PoP, the default of five upgrade domains works well.
 
@@ -287,7 +289,7 @@ Gracefully terminating a worker role instance is similar to terminating a web ro
 
 A worker role instance will want to stop pulling new items from the queue for processing as soon as possible once shutdown is underway. As with the web role, instance shutdown signals such as ```OnStop``` can be useful; a worker role could set a global flag to indicate that the role instance is shutting down. The code that pulls new items from the queue could check that flag and not pull in new items if the instance is shutting down. Worker roles can use ```OnStop``` as a signal, or hook an earlier signal such as the ```OnStopping``` event.
 
-If the worker role instance is processing a message pulled from a Windows Azure Storage queue and it does not complete before the instance is terminated, that message will time out and be returned to the queue so it can be pulled again. (Refer to *Queue-Centric Workflow Pattern* (Chapter 3) for details.) If there are distinct steps in processing, the underlying message can be updated on the queue to indicate progress. For example, PoP processes newly uploaded photos in three steps: extract geolocation information from the photo, create two sizes of thumbnail, and update all SQL Database references. If two of these steps were completed, but not the third, it is indicated by a ```LastCompletedStep``` field in the message object that was pulled from the queue, and that message object can be used to update the copy on the queue. When this message is pulled again from the queue (by a subsequent role instance), processing logic will know to skip the first two steps because LastCompletedStep field is set to two. The first time a message is pulled, the value is set to zero.
+If the worker role instance is processing a message pulled from a Windows Azure Storage queue and it does not complete before the instance is terminated, that message will time out and be returned to the queue so it can be pulled again. (Refer to *Queue-Centric Workflow Pattern* (Chapter 3) for details.) If there are distinct steps in processing, the underlying message can be updated on the queue to indicate progress. For example, PoP processes newly uploaded photos in three steps: extract geolocation information from the photo, create two sizes of thumbnail, and update all SQL Database references. If two of these steps were completed, but not the third, it is indicated by a ```LastCompletedStep``` field in the message object that was pulled from the queue, and that message object can be used to update the copy on the queue. When this message is pulled again from the queue (by a subsequent role instance), processing logic will know to skip the first two steps because ```LastCompletedStep``` field is set to two. The first time a message is pulled, the value is set to zero.
 
 
 #### **Use controlled reboots**
