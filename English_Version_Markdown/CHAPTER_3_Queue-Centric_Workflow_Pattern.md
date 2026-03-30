@@ -42,6 +42,7 @@ Storage of intermediate data is also simplified using cloud services. Cloud serv
 
 
 ## Impact
+
 Availability, Reliability, Scalability, User Experience
 
 
@@ -306,7 +307,7 @@ The same message queue is used by both sender and receiver:
 
 Fields included in the message that goes in the queue are similar to the following:
  
-- Location of uploaded photo (in blob storage): *http://popup loads.blob.core.windows.net/publicphotos/william.jpg*
+- Location of uploaded photo (in blob storage): *http://popuploads.blob.core.windows.net/publicphotos/william.jpg*
 - Authenticated account identifier from the *emailaddress claim*, as described in *Multisite Deployment Pattern* (Chapter 15): *kd1hn@example.com*
 - ```LastCompletedStep```: 0
 
