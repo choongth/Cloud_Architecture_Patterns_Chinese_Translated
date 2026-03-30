@@ -1,7 +1,7 @@
 # 云架构模式
 
-> **原著**：*Cloud Architecture Patterns*
-> **作者**：[Bill Wilder](作者简介.md)
+> **原著**：*Cloud Architecture Patterns*  
+> **作者**：[Bill Wilder](作者简介.md)  
 > **译者**：[choongth（中文翻译版）](https://github.com/choongth)
 
 ---
