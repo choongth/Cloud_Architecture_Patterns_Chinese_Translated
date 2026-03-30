@@ -14,6 +14,8 @@ CDN 仅适用于会被多次访问的文件。那些访问频率较低或仅供�
 
 每个 CDN 节点独立运行。
 
+<br>
+
 <div align="center">
 
 ![Local Image](./images/chapter_14/image1.png)
@@ -21,6 +23,8 @@ CDN 仅适用于会被多次访问的文件。那些访问频率较低或仅供�
 *图 14-1。 用户直接从最近的CDN节点获取内容。CDN节点根据需要从源服务器获取内容。*
 
 </div>
+
+<br>
 
 
 ## 背景
@@ -67,6 +71,8 @@ CDN 是一种专门的缓存，因此，它并非预先包含所有所需的文�
 
 如果请求的文件在 CDN 节点上不可用，CDN 服务实际上充当了中间人的角色，在后台从源服务器检索文件，将其缓存（存储）在 CDN 节点中，然后响应原始请求（此时可以成功响应）。
 
+<br>
+
 > <h3 align="center">CDN 的局限性</h3>
 >
 > CDN 不适用于访问频率低的资源。CDN 仅对那些在从 CDN 缓存过期前至少被访问两次的资源有效。
@@ -74,6 +80,8 @@ CDN 是一种专门的缓存，因此，它并非预先包含所有所需的文�
 > CDN 不适用于不断变化的资源，例如每次请求都会变化的资源。
 >
 > 对于不打算公开访问的内容，CDN 可能不是一个好的选择。
+
+<br>
 
 CDN 在用于访问频率高但很少更改的文件时才能真正发挥作用。
 
@@ -100,16 +108,20 @@ CDN 会存储具有指定过期日期的资源副本；因此，缓存的图像�
 
 在 Windows Azure Blob 存储中，单个 Blob 存储在一个*Blob 容器*中。该容器的优势之一是为其中的 Blob 创建默认的安全上下文。只有存储在公共容器中的 Blob（公共容器是指任何知道容器内文件 URL 的用户都可以查看该文件）才有资格在 CDN 中进行缓存。
 
+<br>
+
 > <h3 align="center">配置 CDN</h3>
 >
 > 为 Blob 启用 CDN 只需在存储帐户级别进行简单的配置更改。为了使 CDN 位于用户和 Blob 存储之间，需要创建一个新的域名。此新域名由系统自动生成。也就是说，我们不使用自己的域名（例如 example.com），而是使用 CDN 服务分配给我们的域名（例如 jaromijo1213.vo.msecnd.net）。在启用 CDN 之前，URL 为 *http://example.com/maura.png*，启用 CDN 后则变为 *http://jaromijo.vo.msecnd.net/maura.png*。您可以选择配置一个自定义域名，使 CDN 地址看起来更简洁；这个自定义域名在 DNS 中也称为*规范名称*（或 CNAME）。PoP 利用了这一自定义功能，创建了 *http://cdn.pageofphotos.com* 作为 CDN 域名，从而使照片 URL 与主应用程序的 URL 更加一致。
+
+<br>
 
 截至撰写本文时，全球共有 8 个 Windows Azure 数据中心，但 Windows Azure CDN 节点位置却有 24 个。由于纳入了更多地理位置，CDN 网络的使用极大地提升了全球覆盖范围，从而实现了更低延迟的内容分发。资源必须至少被请求过一次才能加载到 CDN 缓存中。因此，首次请求该资源的用户体验会比后续请求者差。这种情况会在每个 CDN 节点上发生，因为每个节点都需要填充自己的本地缓存。此外，当资源被请求但已从 CDN 缓存中过期时，也会重复上述过程。
 
 <table>
     <tr>
         <td>
-            <img src="./images/preface/blue.png" width="40">
+            <img src="./images/preface/blue.png" width="50">
         </td>
         <td>
             24 个 CDN 节点各自独立运行，因此每个节点的数据填充都是独立的。
@@ -150,13 +162,15 @@ Windows Azure CDN 支持使用 HTTP 或 HTTPS 进行访问。这主要是为了�
 <table>
     <tr>
         <td>
-            <img src="./images/preface/red.png" width="50">
+            <img src="./images/preface/red.png" width="70">
         </td>
         <td>
             截至撰写本文时，Windows Azure 媒体服务仍处于预览阶段，尚未支持在生产环境中使用。
         </td>
     </tr>
 </table>
+
+<br>
 
 > <h3 align="center">相关章节</h3>
 >
@@ -169,6 +183,8 @@ Windows Azure CDN 支持使用 HTTP 或 HTTPS 进行访问。这主要是为了�
 > - [*代客密钥模式*（第 13 章）](13_第十三章_代客密钥模式.md)
 >
 > - [*多站点部署模式*（第 15 章）](15_第十五章_多站点部署模式.md)
+
+<br>
 
 
 ## 总结
