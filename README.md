@@ -86,4 +86,3 @@
 | 出版社 | O'Reilly Media |
 | 作者 | [Bill Wilder](作者简介.md) |
 | 原版语言 | 英文 |
-| 原版文件 | [`Cloud Architecture Patterns.pdf`](Cloud%20Architecture%20Patterns.pdf) |
