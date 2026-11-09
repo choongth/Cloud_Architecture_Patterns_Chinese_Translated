@@ -7,9 +7,7 @@
 本书通篇使用 Page of Photos 示例应用程序。其中部分功能已使用 Windows Azure 实现，用于演示书中的概念。Page of Photos 的代码（最初非常简洁，之后由作者及其合作者逐步完善）将在 GitHub 的公共代码库中共享。
 
 - 运行 Page of Photos (PoP) 示例应用程序：*http://www.pageofphotos.com*
-
 - 查看 Page of Photos (PoP) 示例应用程序的源代码：*http://www.github.com/codingoutloud/pageofphotos*
-
 - 查找有关本书及未来可能相关内容的信息：*http://www.cloudarchitecturebook.com*
 
 
@@ -106,7 +104,7 @@
 
 - Definition of multitenancy: *http://en.wikipedia.org/wiki/Multitenancy*
 - Transient Fault Handling Application Block (Topaz): *http://msdn.microsoft.com/en-us/library/hh680934(v=PandP.50).aspx*
-- Scalability Targets for Windows Azure Storage: *http://blogs.msdn.com/b/windowsazurestorage/archive/2010/05/10/*windows-azure-storage-abstractions-and-their-scalability-targets.aspx
+- Scalability Targets for Windows Azure Storage: *http://blogs.msdn.com/b/windowsazurestorage/archive/2010/05/10/windows-azure-storage-abstractions-and-their-scalability-targets.aspx*
 - Implementing Retry Logic on Windows Azure: *http://www.davidaiken.com/2011/10/10/implementing-windows-azure-retry-logic/*
 - Fault isolation and recovery: *http://www.faqs.org/rfcs/rfc816.html*
 - Chaos Monkey from Netflix: *http://techblog.netflix.com/2011/07/netflix-simian-army.html*
